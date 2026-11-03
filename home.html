@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Order from your favorite campus restaurants and pick up in minutes."
+    />
+    <title>Campus Eats! — Campus food, made easy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              campus: {
+                primary: "#e8431f",
+                dark: "#b3260e",
+                hero: "#ff7a2f",
+                surface: "#fff4ee",
+                text: "#1f1f1f",
+              },
+            },
+            fontFamily: {
+              sans: ["Nunito", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            borderRadius: {
+              card: "12px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --white: #fff;
+        --spacing-8: 8px;
+        --spacing-16: 16px;
+        --spacing-24: 24px;
+        --spacing-48: 48px;
+        --primary: #e8431f;
+        --primary-dark: #b3260e;
+        --hero-bg: #ff7a2f;
+        --surface: #fff4ee;
+        --text: #1f1f1f;
+        --radius-button: 8px;
+        --radius-card: 12px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-campus-text antialiased">
+    <header class="bg-white">
+      <nav
+        aria-label="Main navigation"
+        class="mx-auto flex max-w-[1440px] items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-12"
+      >
+        <a
+          href="#home"
+          class="shrink-0 text-[26px] font-black tracking-[-1.04px] text-campus-primary"
+        >
+          CAMPUS EATS!
+        </a>
+        <div class="hidden items-center gap-8 md:flex lg:gap-12">
+          <a class="font-semibold text-campus-primary" href="#home" aria-current="page">Home</a>
+          <a class="transition hover:text-campus-primary" href="#menu">Menu</a>
+          <a class="transition hover:text-campus-primary" href="#menu">Restaurants</a>
+          <a class="transition hover:text-campus-primary" href="#contact">Contact</a>
+        </div>
+        <a
+          href="#menu"
+          class="rounded-button bg-campus-primary px-4 py-3 text-sm font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2 sm:px-6 sm:text-base"
+        >
+          Order now
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        aria-labelledby="hero-heading"
+        class="bg-campus-hero"
+      >
+        <div
+          class="mx-auto grid max-w-[1440px] items-center gap-8 px-5 py-12 sm:px-8 sm:py-14 lg:grid-cols-2 lg:gap-12 lg:px-12 lg:py-12"
+        >
+          <div class="flex flex-col items-start gap-6">
+            <h1
+              id="hero-heading"
+              class="max-w-[680px] text-5xl font-black leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl"
+            >
+              Where students bond over food
+            </h1>
+            <p class="max-w-xl text-lg leading-relaxed sm:text-xl">
+              Order from your favorite campus restaurants and pick up in minutes.
+            </p>
+            <a
+              href="#menu"
+              class="rounded-button bg-white px-6 py-4 text-lg font-bold text-campus-dark transition hover:bg-campus-surface focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-campus-hero"
+            >
+              Order now
+            </a>
+          </div>
+          <img
+            class="h-64 w-full rounded-card object-cover sm:h-80 lg:h-[392px]"
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+            alt="A table filled with colorful fresh food"
+            fetchpriority="high"
+          />
+        </div>
+      </section>
+
+      <section
+        id="menu"
+        aria-labelledby="menu-heading"
+        class="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 lg:px-12 lg:py-12"
+      >
+        <h2
+          id="menu-heading"
+          class="mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl"
+        >
+          Popular on campus
+        </h2>
+        <ul class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <li>
+            <article class="flex h-full flex-col gap-4 rounded-card border-2 border-campus-surface bg-white p-4">
+              <img
+                class="h-[184px] w-full rounded-card object-cover"
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                alt="Fresh Caesar salad with crisp greens and vegetables"
+                loading="lazy"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold">Caesar Salad</h3>
+                <p class="mt-1 text-sm text-stone-600">★ 4.8 · 124 ratings</p>
+              </div>
+              <div class="mt-auto flex items-center justify-between gap-3">
+                <p class="font-bold">Rs. 850</p>
+                <button
+                  type="button"
+                  aria-label="Add Caesar Salad to cart"
+                  class="rounded-button bg-campus-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2"
+                >
+                  Add +
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="flex h-full flex-col gap-4 rounded-card border-2 border-campus-surface bg-white p-4">
+              <img
+                class="h-[184px] w-full rounded-card object-cover"
+                src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                alt="Freshly baked pizza topped with vegetables"
+                loading="lazy"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold">Pizza Fajita</h3>
+                <p class="mt-1 text-sm text-stone-600">★ 4.9 · 208 ratings</p>
+              </div>
+              <div class="mt-auto flex items-center justify-between gap-3">
+                <p class="font-bold">Rs. 1250</p>
+                <button
+                  type="button"
+                  aria-label="Add Pizza Fajita to cart"
+                  class="rounded-button bg-campus-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2"
+                >
+                  Add +
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="flex h-full flex-col gap-4 rounded-card border-2 border-campus-surface bg-white p-4">
+              <img
+                class="h-[184px] w-full rounded-card object-cover"
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                alt="Pasta tossed with vegetables and sauce"
+                loading="lazy"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold">Pasta Red Sauce</h3>
+                <p class="mt-1 text-sm text-stone-600">★ 4.7 · 96 ratings</p>
+              </div>
+              <div class="mt-auto flex items-center justify-between gap-3">
+                <p class="font-bold">Rs. 950</p>
+                <button
+                  type="button"
+                  aria-label="Add Pasta Red Sauce to cart"
+                  class="rounded-button bg-campus-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2"
+                >
+                  Add +
+                </button>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="flex h-full flex-col gap-4 rounded-card border-2 border-campus-surface bg-white p-4">
+              <img
+                class="h-[184px] w-full rounded-card object-cover"
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                alt="Beef burger with fresh toppings"
+                loading="lazy"
+              />
+              <div>
+                <h3 class="text-lg font-extrabold">Beef Burger</h3>
+                <p class="mt-1 text-sm text-stone-600">★ 4.8 · 182 ratings</p>
+              </div>
+              <div class="mt-auto flex items-center justify-between gap-3">
+                <p class="font-bold">Rs. 850</p>
+                <button
+                  type="button"
+                  aria-label="Add Beef Burger to cart"
+                  class="rounded-button bg-campus-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2"
+                >
+                  Add +
+                </button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="contact"
+        aria-labelledby="contact-heading"
+        class="bg-campus-surface"
+      >
+        <div
+          class="mx-auto grid max-w-[1440px] gap-8 px-5 py-12 sm:px-8 sm:py-14 md:grid-cols-2 lg:gap-12 lg:px-12"
+        >
+          <div>
+            <h2 id="contact-heading" class="text-3xl font-extrabold sm:text-4xl">
+              Get in touch
+            </h2>
+            <p class="mt-4 max-w-md leading-relaxed">
+              Questions, cravings or feedback? We’re all ears.
+            </p>
+          </div>
+          <form action="#" method="post" class="space-y-4">
+            <div>
+              <label for="contact-name" class="mb-1.5 block text-sm font-bold">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                placeholder="Your name"
+                class="w-full rounded-button border border-orange-200 bg-white px-4 py-3 outline-none focus:border-campus-primary focus:ring-2 focus:ring-campus-primary/20"
+              />
+            </div>
+            <div>
+              <label for="contact-email" class="mb-1.5 block text-sm font-bold">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+                class="w-full rounded-button border border-orange-200 bg-white px-4 py-3 outline-none focus:border-campus-primary focus:ring-2 focus:ring-campus-primary/20"
+              />
+            </div>
+            <div>
+              <label for="contact-message" class="mb-1.5 block text-sm font-bold">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                required
+                placeholder="How can we help?"
+                class="w-full resize-y rounded-button border border-orange-200 bg-white px-4 py-3 outline-none focus:border-campus-primary focus:ring-2 focus:ring-campus-primary/20"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="rounded-button bg-campus-primary px-6 py-3 font-bold text-white transition hover:bg-campus-dark focus:outline-none focus:ring-2 focus:ring-campus-primary focus:ring-offset-2"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-campus-dark text-white">
+      <div
+        class="mx-auto flex max-w-[1440px] flex-col gap-4 px-5 py-5 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12"
+      >
+        <p class="font-bold">Campus Eats! · PUCIT, Lahore</p>
+        <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a class="transition hover:underline" href="#home">Home</a>
+          <a class="transition hover:underline" href="#menu">Menu</a>
+          <a class="transition hover:underline" href="#menu">Restaurants</a>
+          <a class="transition hover:underline" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
